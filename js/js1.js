@@ -2,7 +2,7 @@ const list = [];
 let num = 0;
 
 
-// players-cart
+// players-cart----
 function displayPlayers() {
 
     const totalPlayers = document.getElementById("total-players");
@@ -44,24 +44,11 @@ function addList(element) {
     
 
 }
-let totalPlayerCost = 0;
-function playerExp(element) {
-
-    const tp = document.getElementById('total-players');
-    totalPlayerCost = tp.innerText * 1000;
-    console.log(totalPlayerCost);
-
-    const tpCost = document.getElementById('playerExp');
-    tpCost.textContent = '';
-
-    const tr1 = document.createElement("span");
-    tr1.innerHTML = `<span class="text-white text-center fw-bold" style="border: hidden;">$${totalPlayerCost}</span>`;
-    tpCost.appendChild(tr1);
-
-}
 
 
 
+
+//player expenses----
 document.getElementById('calculate-btn').addEventListener('click',function(){
 
     const expensesperplayer = document.getElementById('expense-calculation');
@@ -80,6 +67,8 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
 })
 
+
+//Total-cost----
 
 document.getElementById('btn-total').addEventListener('click',function(){
 
