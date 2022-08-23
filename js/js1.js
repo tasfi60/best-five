@@ -26,6 +26,8 @@ function displayPlayers() {
 cnt = 0;
 function addList(element) {
     cnt++;
+    
+    element.disabled = true;
 
     if (cnt > 5) {
         alert('you can not select more than 5 players!');
@@ -41,9 +43,7 @@ function addList(element) {
     }
     displayPlayers();
 
-    element.style.color = "gray";
-
-    element.disabled = true;
+    
 
 }
 let totalPlayerCost = 0;
