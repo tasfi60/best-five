@@ -1,7 +1,5 @@
-
-
-
 const list = [];
+let num = 0;
 
 
 // players-cart
@@ -74,108 +72,34 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     const totalexp = totalexpense.innerText;
     totalexpense.innerText = expenseAmount;
 
-    const totalexpenseofplayers = expenseAmount*5;
+    const totalexpenseofplayers = expenseAmount*cnt;
     totalexpense.innerText = totalexpenseofplayers;
    
     expensesperplayer.value = '';
+     num = totalexpenseofplayers;
 
-    document.getElementById('btn-total').addEventListener('click',function(){
+})
 
-        const Manager_cost = document.getElementById('managercost');
-        const costofmanagerString = Manager_cost.value;
-        const costofmanager = parseFloat(costofmanagerString);
-    
-        const Coach_cost = document.getElementById('coachcost');
-        const costofcoachString = Coach_cost.value;
-        const costofcoach = parseInt(costofcoachString);
-    
-        const totalamount = document.getElementById('totalcost');
-        const total = totalamount.innerText;
-    
-        const totalcost = costofmanager + costofcoach + totalexpenseofplayers;
-        totalamount.innerText = totalcost;
-        Manager_cost.value = '';
-        Coach_cost.value = '';
-        
-    
-    })
+
+document.getElementById('btn-total').addEventListener('click',function(){
+
+    const Manager_cost = document.getElementById('managercost');
+    const costofmanagerString = Manager_cost.value;
+    const costofmanager = parseFloat(costofmanagerString);
+
+    const Coach_cost = document.getElementById('coachcost');
+    const costofcoachString = Coach_cost.value;
+    const costofcoach = parseInt(costofcoachString);
+
+    const totalamount = document.getElementById('totalcost');
+    const total = totalamount.innerText;
+
+    const totalcost = costofmanager + costofcoach + num;
+    totalamount.innerText = totalcost;
+    Manager_cost.value = '';
+    Coach_cost.value = '';
     
 
 })
 
 
-
-// const cart = [];
-// // products-cart
-
-// function displayProduct()
-// {
-//     let totalPrice = 0;
-//     const totalProducts = document.getElementById("total-players");
-//     totalProducts.innerText = cart.length;
-
-//     const cartContainer = document.getElementById("player-list");
-//     cartContainer.textContent = '';
-
-//     for(let i = 0; i < cart.length; i++)
-//     {
-//         // totalPrice += cart[i].pdPrice;
-
-//         const tr = document.createElement("tr");
-//         tr.innerHTML = `
-//         <th>${i+1}</th>
-//         <td>${cart[i].pdName}</td>
-//         `;
-//         cartContainer.appendChild(tr);
-//     }
-//     // const tr = document.createElement('tr');
-//     // tr.innerHTML = `
-//     // <th></th>
-//     // <td>Total Price</td>
-//     // <td>${totalPrice}</td>
-//     // `;
-
-//     // cartContainer.appendChild(tr);
-// }
-
-
-
-// function addToCart(element) {
-//     const pdName = element.parentNode.children[0].innerText;
-   
-//     const pd = {
-//         pdName: pdName
-//     }
-
-//     cart.push(pd);
-    
-//     displayProduct();
-// }
-
-
-
-
-
-
-
-// document.getElementById('select-btn').addEventListener('click',function(){
-//     const playerlist = document.getElementById('player-list');
-//     const li = document.createElement('li');
-
-//     let name = [];
-//     name = document.getElementsByClassName('p-name');
-
-//     for(let i=0; i< name.length; i++)
-//     {
-//         if(i==)
-//     }
-
-
-    
-//     // name.innerText = pname.length;
-    
-//     // for (let i = 0; i < pname.length; i++) {
-//     //     console.log(pname[i].innerText);
-//     // }
-
-// })
