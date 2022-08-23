@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+.h-tittle{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.content{
+    width: 80%;
+
+}
+
+.side-bar{
+    width: 20%;
+  
+}
