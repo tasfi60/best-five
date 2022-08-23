@@ -17,3 +17,7 @@
 .playercard{
     height: 300px ;
 }
+
+.hrcolor{
+    border-top: 1px solid white;
+}
